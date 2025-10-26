@@ -1,33 +1,38 @@
 # Food Security DApp
 
-A simple decentralized mortgage application built using **Metamask, Solidity, Truffle, and React**.  
-This DApp allows users to create mortgages, approve them, and make payments, all directly via **MetaMask** without a backend server.
+A simple decentralized **Food Supply Chain application** built using **MetaMask, Solidity, Truffle, and React**.  
+This DApp allows users to manage food batches, track their status, approve batches, update temperatures, and monitor deliveries across the supply chain, all directly via **MetaMask** without a backend server.
 
 ---
 
 ## Features
 
 - Connect with MetaMask and display your wallet address.  
-- Create a new mortgage.  
-- View all existing mortgages in a table.  
-- Approve mortgages (bank/admin role) -- As a POC - Currently Anyone can.  
-- Make payments only for approved mortgages.  
-- Tab-based interface for a clean UI.  
+- **Farmer**: Create a new food batch with crop type, quantity, and initial temperature.  
+- **Manager**: Approve batches and update batch temperature.  
+- **Transporter**: Pick approved batches for delivery.  
+- **Distributor**: Receive picked batches.  
+- **Consumer**: Confirm delivery of received batches.  
+- **Status Tab**: View all batches and their current status in the supply chain.  
+- Tab-based interface for clean UI and easy role-based operations.  
 
 ---
 
 ## Folder Structure
 
 ```
-mortgage-blockchain/
-├─ contracts/        # Solidity smart contract
-├─ migrations/       # Truffle migrations
-├─ build/            # Compiled contract ABI & JSON
-├─ src/              # React frontend source code
-├─ public/           # HTML template
+food-security-dapp/
+├─ contracts/ # Solidity smart contract
+├─ migrations/ # Truffle migrations
+├─ build/ # Compiled contract ABI & JSON
+├─ src/ # React frontend source code
+├─ public/ # HTML template
 ├─ package.json
 └─ README.md
 ```
+
+---
+
 
 ---
 
@@ -47,7 +52,7 @@ mortgage-blockchain/
 
 ```bash
 git clone <your-repo-url>
-cd mortgage-blockchain
+cd food-security-dapp
 ```
 
 2. Install dependencies:
@@ -75,21 +80,28 @@ truffle migrate --network development --reset
 npm run dev
 ```
 
-- Open the URL provided by Vite (usually `http://localhost:5173`)  
-- Click **Connect Wallet** to connect MetaMask.  
-- Use the **tabs** to create, approve, or pay mortgages.  
+1. Open the URL provided by Vite (usually http://localhost:5173)
+2. Click Connect Wallet to connect MetaMask.
+3. Use the tabs to perform role-specific actions:
+   -> Farmer – Create batches
+   ->Manager – Approve and update temperature
+   ->Transporter – Pick batches
+   ->Distributor – Receive batches
+   ->Consumer – Confirm delivery
+   ->Status – View all batches and current status
 
 ---
 
 ## How It Works
 
-1. **Create Mortgage** – Any user can create a mortgage by entering an amount.  
-2. **View Mortgages** – All mortgages are listed in a table.  
-3. **Approve Mortgage** – Only the bank/admin account can approve a mortgage.  
-4. **Make Payment** – Only available if the mortgage is approved.  
+1. Farmer – Creates a food batch with crop type, quantity, and temperature.
+2. Manager – Approves batches and can update temperature during storage.
+3. Transporter – Picks approved batches for distribution.
+4. Distributor – Receives transported batches.
+5. Consumer – Confirms delivery of batches.
+6. Status Tab – Provides a full overview of all batches and their current stage in the supply chain.
 
-All transactions are directly signed via **MetaMask** and executed on the blockchain.  
-
+All transactions are directly signed via MetaMask and executed on the blockchain.
 ---
 
 ## Notes
