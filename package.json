@@ -1,7 +1,7 @@
 {
-    "name": "mortgage-blockchain",
+    "name": "food-security",
     "version": "1.0.0",
-    "description": "Blockchain-based mortgage smart contract system using Truffle, Ganache, and React frontend.",
+    "description": "Blockchain-based food security smart contract system using Truffle, Ganache, and React frontend.",
     "scripts": {
         "ganache": "ganache --hardfork shanghai --mnemonic=\"candy maple cake sugar pudding cream honey rich smooth crumble sweet treat\" --port 8545 --chain.chainId 1337",
         "compile": "truffle compile --all",
