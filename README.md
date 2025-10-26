@@ -1,4 +1,4 @@
-# Blockchain Mortgage DApp
+# Food Security DApp
 
 A simple decentralized mortgage application built using **Metamask, Solidity, Truffle, and React**.  
 This DApp allows users to create mortgages, approve them, and make payments, all directly via **MetaMask** without a backend server.
